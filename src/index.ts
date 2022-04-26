@@ -53,7 +53,7 @@ export class ExpoMixpanelAnalytics {
         this.platform = Device.modelId;
         this.model = Device.modelName || undefined;
       } else {
-        this.platform = "android";
+        this.platform = Platform.OS;
       }
 
       AsyncStorage.getItem(this.storageKey, (_, result) => {
